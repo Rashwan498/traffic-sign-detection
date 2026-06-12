@@ -1,0 +1,16 @@
+.venv/
+data/crops_cache.h5
+data/.prep_progress.json
+data/.prep.pid
+archive/
+notebooks/
+paper/
+results/*/latest.pt
+results/*/*.png
+results/*/*.csv
+results/baseline.log
+results/.baseline.pid
+**/__pycache__/
+*.pyc
+.git/
+.DS_Store
