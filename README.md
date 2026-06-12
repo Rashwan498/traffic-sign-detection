@@ -125,9 +125,37 @@ Key test metrics (from `results/aug/test_metrics.json`):
 
 Training curve and confusion matrix (click to view):
 
-![Training curves](results/aug/training_curves.png)
+![Training curves](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/training_curves.png)
 
-![Test confusion matrix](results/aug/test_confusion_matrix.png)
+![Test confusion matrix](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/test_confusion_matrix.png)
+
+## Example inference
+
+Use the `SignClassifier` wrapper to run a quick local prediction. Example using the provided sample SVG sign:
+
+```python
+from PIL import Image
+from src.deploy.inference import SignClassifier
+
+# load model checkpoint
+clf = SignClassifier('results/aug/best.pt')
+
+# open example image (in repo)
+img = Image.open('examples/sample_sign.svg')
+
+# predict top-3
+preds = clf.predict(img, top_k=3)
+for p in preds:
+  print(p.label, f"{p.probability:.3f}")
+```
+
+Sample output (example):
+
+```
+regulatory--stop--g1 0.982
+regulatory--no-entry--g1 0.012
+regulatory--priority-road--g4 0.002
+```
 
 ## CI / Automated Docker build
 
