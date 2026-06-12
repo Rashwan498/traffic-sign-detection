@@ -1,6 +1,6 @@
-# VisionProject_handoff
+# Traffic Sign Detection
 
-Comprehensive vision project for image classification experiments, training, evaluation, and deployment.
+End-to-end traffic-sign classification and deployment project (MTSD experiments, training, evaluation, robustness, and exports).
 
 ## Overview
 
@@ -112,7 +112,22 @@ Exported model files are included in the repository at [results/aug/export/model
 
 Direct raw download (GitHub):
 
-https://raw.githubusercontent.com/Rashwan498/VisionProject_handoff/main/results/aug/export/model.onnx
+https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/export/model.onnx
+
+## Results
+
+Key test metrics (from `results/aug/test_metrics.json`):
+
+- **Test samples:** 8604
+- **Accuracy:** 96.89%
+- **Top-5 accuracy:** 99.51%
+- **Macro F1:** 95.82%
+
+Training curve and confusion matrix (click to view):
+
+![Training curves](results/aug/training_curves.png)
+
+![Test confusion matrix](results/aug/test_confusion_matrix.png)
 
 ## CI / Automated Docker build
 
