@@ -125,14 +125,15 @@ Key test metrics (from `results/aug/test_metrics.json`):
 
 Training visuals extracted from the analysis notebook:
 
+![Training curves](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/training_curves.png)
+![Test confusion matrix](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/test_confusion_matrix.png)
+Other extracted visuals:
 ![Result 1](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_1.png)
-![Result 2](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_2.png)
 ![Result 3](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_3.png)
 ![Result 4](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_4.png)
 ![Result 5](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_5.png)
 ![Result 6](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_6.png)
 ![Result 7](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_7.png)
-![Result 8](https://raw.githubusercontent.com/Rashwan498/traffic-sign-detection/main/results/aug/extracted_image_8.png)
 
 ## Example inference
 
