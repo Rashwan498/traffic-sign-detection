@@ -81,6 +81,53 @@ Maintainer: project handoff
 ---
 
 For full details on scripts and options, inspect the `src/` folder and the `run_experiments.sh` script.
+
+## Badges
+
+- ![Docker Pulls](https://img.shields.io/docker/pulls/rashadeltaher/cnn-predictor)
+- ![CI](https://github.com/Rashwan498/VisionProject_handoff/actions/workflows/docker-build.yml/badge.svg)
+- ![License](https://img.shields.io/badge/license-MIT-green)
+- ![Python](https://img.shields.io/badge/python-3.11-blue)
+
+## Live demo
+
+The project is deployed as a Streamlit demo: https://cnn-predictor.streamlit.app/
+
+## Docker image
+
+The project provides a Docker image on Docker Hub: https://hub.docker.com/r/rashadeltaher/cnn-predictor
+
+Pull and run the image locally:
+
+```bash
+docker pull rashadeltaher/cnn-predictor:latest
+docker run -p 8501:8501 rashadeltaher/cnn-predictor:latest
+```
+
+The `src/deploy/Dockerfile` can be used to build the container locally or in CI.
+
+## Model artifacts
+
+Exported model files are included in the repository at [results/aug/export/model.onnx](results/aug/export/model.onnx) and the CoreML package at [results/aug/export/model.mlpackage](results/aug/export/model.mlpackage).
+
+Direct raw download (GitHub):
+
+https://raw.githubusercontent.com/Rashwan498/VisionProject_handoff/main/results/aug/export/model.onnx
+
+## CI / Automated Docker build
+
+A GitHub Actions workflow is included to build the Docker image on `push` to `main`. If you add Docker Hub credentials as repository secrets (`DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`) the workflow will push the built image to Docker Hub automatically.
+
+To enable pushes from Actions:
+
+1. Go to your repository settings → Secrets → Actions.
+2. Add `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` (or a Docker Hub access token).
+
+The workflow file is at `.github/workflows/docker-build.yml`.
+
+## Pinning this repository on your GitHub profile
+
+To highlight this project on your GitHub profile, go to your profile page → "Customize your pins" → select this repository and save.
 # Vision Term Project — Traffic Sign Classification on MTSD
 
 End-to-end traffic-sign classification on the Mapillary Traffic Sign Dataset
